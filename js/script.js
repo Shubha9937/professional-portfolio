@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 // Open mailto client fallback
-                const mailtoUrl = `mailto:subhasis.dev@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hi Subhasis,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                const mailtoUrl = `mailto:spsubhasis1998@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hi Subhasis,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
                 window.location.href = mailtoUrl;
 
                 submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Ready!';
@@ -131,4 +131,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 800);
         });
     }
+
+    // Theme Switcher
+    const themeDots = document.querySelectorAll('.theme-dot');
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'indigo';
+    
+    function applyTheme(theme) {
+        if (theme === 'indigo') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+        themeDots.forEach(dot => {
+            if (dot.getAttribute('data-set') === theme) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+        localStorage.setItem('portfolio-theme', theme);
+    }
+
+    applyTheme(savedTheme);
+
+    themeDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const theme = dot.getAttribute('data-set');
+            applyTheme(theme);
+        });
+    });
 });
+
