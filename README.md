@@ -1,4 +1,4 @@
-# Subhasis — Senior Data Engineer Portfolio
+# Subhasis — Data Engineer Portfolio
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Site-6366f1?style=for-the-badge&logo=github)](https://shubha9937.github.io/professional-portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-06b6d4?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/spsubhasis)
