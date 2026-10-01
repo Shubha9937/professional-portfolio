@@ -1,4 +1,4 @@
-# Subhasis (SHubha9937) - Professional Portfolio Website
+# Subhasis (Shubha9937) - Professional Portfolio Website
 
 Personal portfolio website showcasing software & data engineering projects, tech stack, experience, and certifications.
 
@@ -18,12 +18,12 @@ Personal portfolio website showcasing software & data engineering projects, tech
 ### Step 2: Push the Code
 In your terminal, navigate to this project folder and push:
 ```bash
-cd C:\Users\subhasis\.gemini\antigravity-ide\scratch\SHubha9937.github.io
+cd C:\Users\subhasis\.gemini\antigravity-ide\scratch\Shubha9937.github.io
 git push -u origin main
 ```
 
 ### Step 3: Enable GitHub Pages
-1. Go to your repository: `https://github.com/SHubha9937/professional-portfolio/settings/pages`
+1. Go to your repository: `https://github.com/Shubha9937/professional-portfolio/settings/pages`
 2. Under **Build and deployment** -> **Source**, choose **Deploy from a branch**.
 3. Select branch **`main`** and folder **`/ (root)`**, then click **Save**.
 4. In ~60 seconds, your site will be live at:
@@ -32,7 +32,7 @@ git push -u origin main
 ---
 
 ## 🛠️ Personalization Checklist
-- [ ] **Profile Picture**: The avatar dynamically loads your GitHub profile picture (`https://github.com/SHubha9937.png`). You can also place an image in `images/avatar.jpg` and update the `src` attribute in `index.html`.
+- [ ] **Profile Picture**: The avatar dynamically loads your GitHub profile picture (`https://github.com/Shubha9937.png`). You can also place an image in `images/avatar.jpg` and update the `src` attribute in `index.html`.
 - [ ] **Resume**: Place your resume PDF in `docs/resume.pdf` so visitors can download it via the "Download CV" button.
 - [ ] **Experience & Education**: Update your companies, colleges, dates, and bullet points in `index.html`.
 - [ ] **Projects**: Add your GitHub project links and descriptions in the `portfolio` section.
