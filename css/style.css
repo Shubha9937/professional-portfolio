@@ -692,35 +692,41 @@ section {
 .timeline-card .company-header {
     display: flex;
     align-items: center;
-    gap: 1.8rem;
-    margin-bottom: 1.8rem;
+    gap: 1.4rem;
+    margin-bottom: 1.5rem;
 }
 
 .timeline-card .company-logo-badge {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 1.4rem;
+    width: 4.6rem;
+    height: 4.6rem;
+    max-width: 46px;
+    max-height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+    border-radius: 1.2rem;
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
-    padding: 0.4rem;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    background: #0f172a;
+    padding: 0.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
 }
 
 .timeline-card:hover .company-logo-badge {
-    transform: scale(1.08);
+    transform: scale(1.06);
     border-color: var(--primary-light);
-    box-shadow: 0 0 20px var(--primary-glow);
+    box-shadow: 0 0 15px var(--primary-glow);
 }
 
 .timeline-card .company-logo-badge img {
     width: 100%;
     height: 100%;
+    max-width: 40px;
+    max-height: 40px;
     object-fit: contain;
     border-radius: 0.8rem;
     display: block;
@@ -728,18 +734,22 @@ section {
 
 .timeline-card .company-title-info {
     flex: 1;
+    min-width: 0;
 }
 
 .timeline-card .company-title-info .period {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .timeline-card .company-title-info h3 {
-    margin-bottom: 0.3rem;
+    font-size: 1.85rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.25;
 }
 
 .timeline-card .company-title-info .institution {
     margin-bottom: 0;
+    font-size: 1.35rem;
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -747,7 +757,7 @@ section {
 
 .timeline-card .company-title-info .institution i {
     color: var(--accent-light);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .timeline-card .period {
