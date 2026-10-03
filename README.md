@@ -4,7 +4,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-06b6d4?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/spsubhasis)
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-8b5cf6?style=for-the-badge&logo=gmail)](mailto:spsubhasis1998@gmail.com)
 
-> **Data Engineer with 5+ years of experience** in building, scaling, and maintaining robust data pipelines. Proven ability to design, develop, and deploy scalable, reliable data solutions using **Python, Airflow, Spark, Databricks, Kafka, Azure, AWS, Terraform, Docker, Kubernetes, Ansible, Fivetran, dbt, SQL, and AI Models**.
+> **Data Engineer with 5+ years of experience** in building, scaling, and maintaining robust data pipelines. Proven ability to design, develop, and deploy scalable, reliable data solutions using **Python, PySpark, Airflow, Spark, Databricks, Kafka, Apache Iceberg, Azure, AWS, Terraform, Docker, Kubernetes, Ansible, Fivetran, dbt, and SQL**.
 
 🌐 **Live Portfolio**: [https://shubha9937.github.io/professional-portfolio/](https://shubha9937.github.io/professional-portfolio/)
 
@@ -12,13 +12,13 @@
 
 ## 🛠️ Core Tech Stack & Toolset
 
-- **Languages & Frameworks:** Python, SQL, Bash
-- **Data Platforms & Compute:** Apache Spark, Databricks, AI Models / GenAI
+- **Languages & Frameworks:** Python, PySpark, SQL, Bash, TypeScript
+- **Data Platforms & Compute:** Apache Spark, Databricks, Apache Iceberg, AWS Glue, AWS Redshift
 - **Orchestration & Transformation:** Apache Airflow, dbt (data build tool), Fivetran
-- **Streaming & Messaging:** Apache Kafka, Event Streams
+- **Streaming & Messaging:** Apache Kafka, Confluent Kafka, AWS Glue Streaming, HVR (CDC)
 - **Cloud Infrastructure & IaC:** Microsoft Azure, Amazon Web Services (AWS), HashiCorp Terraform
 - **Containerization & CI/CD:** Docker, Kubernetes, Ansible, Git, GitHub Actions
-- **Data Warehousing & Databases:** BigQuery, PostgreSQL, MySQL
+- **Data Warehousing & Databases:** BigQuery, AWS Redshift, PostgreSQL, MySQL, Aurora, Iceberg Lakehouse
 
 ---
 

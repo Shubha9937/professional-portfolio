@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="icebergGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="icebergGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="icebergDeep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0c4a6e" />
+    </linearGradient>
+  </defs>
+  <!-- Water line / subtle glow -->
+  <path d="M12 70 Q64 66 116 70 Q64 74 12 70 Z" fill="rgba(56, 189, 248, 0.4)"/>
+  
+  <!-- Above water iceberg tip -->
+  <polygon points="64,18 84,66 44,66" fill="url(#icebergGrad2)" />
+  <polygon points="64,18 76,66 44,66" fill="#e0f2fe" opacity="0.9" />
+  <polygon points="64,18 84,66 76,66" fill="url(#icebergGrad1)" />
+
+  <!-- Below water iceberg body -->
+  <polygon points="44,70 84,70 102,106 64,118 26,104" fill="url(#icebergGrad1)" />
+  <polygon points="44,70 68,70 64,118 26,104" fill="url(#icebergGrad2)" opacity="0.85" />
+  <polygon points="68,70 84,70 102,106 64,118" fill="url(#icebergDeep)" />
+</svg>
