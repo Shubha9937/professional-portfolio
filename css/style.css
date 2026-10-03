@@ -385,7 +385,7 @@ header .footer-text {
 /* ================= SECTIONS COMMON ================= */
 section {
     min-height: auto;
-    padding: 4.8rem 8% 4.5rem;
+    padding: 3.2rem 7% 2.8rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -394,17 +394,17 @@ section {
 }
 
 section.home {
-    min-height: 80vh;
-    justify-content: center;
-    padding: 5rem 8% 4rem;
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 4.2rem 7% 2.8rem;
 }
 
 .heading {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 2.5rem;
-    letter-spacing: -0.8px;
+    margin-bottom: 2rem;
+    letter-spacing: -0.6px;
     display: flex;
     align-items: center;
     gap: 1.2rem;
