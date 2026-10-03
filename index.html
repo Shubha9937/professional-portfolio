@@ -55,7 +55,8 @@
                 <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
                 <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
                 <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="#portfolio"><i class="fas fa-laptop-code"></i> Portfolio & Skills</a></li>
+                <li><a href="#saturam-cli"><i class="fas fa-robot"></i> saturam-cli</a></li>
+                <li><a href="#portfolio"><i class="fas fa-laptop-code"></i> Portfolio &amp; Skills</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
@@ -291,6 +292,95 @@
         </div>
     </section>
 
+    <!-- Dedicated saturam-cli Showcase Section -->
+    <section class="saturam-section" id="saturam-cli">
+        <h1 class="heading">Featured Showcase &bull; <span>saturam-cli</span></h1>
+
+        <div class="saturam-hero-card">
+            <div class="saturam-hero-header">
+                <span class="saturam-badge"><i class="fas fa-microchip"></i> AI-Powered Code Review Engine</span>
+                <div class="project-links">
+                    <a href="https://github.com/Shubha9937" target="_blank" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <h2 class="saturam-hero-title">saturam-cli <span>&bull; AI Code Review Automation</span></h2>
+            <div class="saturam-hero-tagline">Multi-Agent Pull Request Review &amp; Auditor Engine across GitHub, GitLab, and Bitbucket</div>
+
+            <p class="saturam-hero-desc">
+                <strong>saturam-cli</strong> is an AI-powered command-line interface designed to streamline and automate code reviews across GitHub, GitLab, and Bitbucket. Built with <strong>TypeScript</strong> and <strong>Node.js</strong>, it employs a <strong>multi-agent review architecture</strong> where independent AI agents analyze pull request diffs and an auditor validates findings before posting structured inline comments. It supports leading cloud LLMs (Anthropic, OpenAI, Gemini, Bedrock) as well as private/self-hosted models via Ollama. The tool features seamless CI/CD pipeline automation, ticket context awareness, and integration with developer environments like Cursor and Claude Code to enhance software quality and speed up PR merge cycles.
+            </p>
+
+            <div class="saturam-hero-actions">
+                <a href="https://github.com/Shubha9937" target="_blank" class="btn"><i class="fab fa-github"></i> Explore on GitHub</a>
+                <a href="#contact" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); box-shadow: none;"><i class="fas fa-envelope"></i> Inquire About Tooling</a>
+            </div>
+
+            <div class="saturam-tech-tags">
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Multi-Agent AI</span>
+                <span class="project-tag">Anthropic Claude</span>
+                <span class="project-tag">OpenAI GPT-4o</span>
+                <span class="project-tag">Google Gemini</span>
+                <span class="project-tag">AWS Bedrock</span>
+                <span class="project-tag">Ollama (Private Models)</span>
+                <span class="project-tag">GitHub / GitLab / Bitbucket</span>
+                <span class="project-tag">CI/CD Automation</span>
+                <span class="project-tag">Cursor IDE</span>
+                <span class="project-tag">Claude Code</span>
+            </div>
+        </div>
+
+        <!-- 4 Key Feature Pillars -->
+        <div class="saturam-features-grid">
+            <div class="saturam-feature-card">
+                <div class="saturam-feature-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Multi-Agent Architecture</h3>
+                <p>Dispatches specialized, independent AI reviewer agents to analyze PR diffs concurrently (security, logic, performance, syntax), followed by a central auditor agent that validates and deduplicates findings before generating inline PR comments.</p>
+            </div>
+
+            <div class="saturam-feature-card">
+                <div class="saturam-feature-icon"><i class="fas fa-brain"></i></div>
+                <h3>Universal Cloud &amp; Local LLMs</h3>
+                <p>Native provider orchestration across Anthropic Claude, OpenAI GPT-4o, Google Gemini, and AWS Bedrock, along with 100% private, on-premise model execution via local Ollama instances.</p>
+            </div>
+
+            <div class="saturam-feature-card">
+                <div class="saturam-feature-icon"><i class="fas fa-code-branch"></i></div>
+                <h3>VCS &amp; CI/CD Automation</h3>
+                <p>Automated code review triggers and status checks across GitHub Actions, GitLab CI/CD, and Bitbucket Pipelines with ticket context awareness (Jira, Linear, GitHub Issues) for complete requirement traceability.</p>
+            </div>
+
+            <div class="saturam-feature-card">
+                <div class="saturam-feature-icon"><i class="fas fa-terminal"></i></div>
+                <h3>IDE Workflows (Cursor &amp; Claude Code)</h3>
+                <p>Seamlessly integrates into developer environments like Cursor and Claude Code, empowering developers to run local pre-commit reviews, iterate rapidly, and accelerate overall pull request merge velocity.</p>
+            </div>
+        </div>
+
+        <!-- Terminal Execution Mockup -->
+        <div class="saturam-terminal">
+            <div class="saturam-terminal-bar">
+                <div class="terminal-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <div class="terminal-title">bash &mdash; saturam-cli v1.0.0</div>
+                <div style="width: 4rem;"></div>
+            </div>
+            <div class="saturam-terminal-body">
+                <div><span class="terminal-prompt">$</span> <span class="terminal-cmd">npx saturam-cli review --pr 142 --provider github --model claude-3-5-sonnet</span></div>
+                <div class="terminal-info"><i class="fas fa-spinner fa-spin"></i> [1/4] Connecting to GitHub repository &amp; extracting PR #142 diff (8 files changed, +342/-89)...</div>
+                <div class="terminal-info"><i class="fas fa-users-cog"></i> [2/4] Initializing Multi-Agent review pipeline: 3 specialized reviewer agents dispatched...</div>
+                <div class="terminal-info"><i class="fas fa-shield-alt"></i> [3/4] Auditor Agent: Validating findings, filtering false-positives &amp; formatting feedback...</div>
+                <div class="terminal-success"><i class="fas fa-check-circle"></i> [4/4] Successfully posted 4 structured inline review comments on GitHub PR #142!</div>
+                <div class="terminal-highlight" style="margin-top: 0.6rem;">✨ Review complete in 3.42s &bull; Code quality score: 94/100 &bull; Ready for approval</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio & Skills Section -->
     <section class="portfolio" id="portfolio">
         <h1 class="heading">Portfolio &amp; <span>Skills</span></h1>
@@ -364,32 +454,6 @@
                     <span class="project-tag">Kubernetes</span>
                     <span class="project-tag">Ansible</span>
                     <span class="project-tag">Docker</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div>
-                    <div class="project-header">
-                        <i class="fas fa-robot project-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/Shubha9937" target="_blank" title="GitHub Repo"><i
-                                    class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3>saturam-cli — AI Code Review Automation</h3>
-                    <p>AI-powered CLI in TypeScript &amp; Node.js utilizing a multi-agent review architecture
-                        (specialized reviewer agents &amp; auditor) to analyze PR diffs and post structured inline comments
-                        across GitHub, GitLab, and Bitbucket. Supports cloud LLMs (Anthropic, OpenAI, Gemini, Bedrock),
-                        local Ollama models, CI/CD automation, ticket context awareness, and Cursor/Claude Code integration.</p>
-                </div>
-                <div class="project-tags">
-                    <span class="project-tag">TypeScript</span>
-                    <span class="project-tag">Node.js</span>
-                    <span class="project-tag">Multi-Agent AI</span>
-                    <span class="project-tag">Claude / GPT / Gemini</span>
-                    <span class="project-tag">Ollama</span>
-                    <span class="project-tag">GitHub / GitLab API</span>
-                    <span class="project-tag">CI/CD</span>
                 </div>
             </div>
 
