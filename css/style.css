@@ -1226,17 +1226,6 @@ section {
     box-shadow: 0 8px 25px var(--primary-glow), 0 0 15px var(--accent-glow);
 }
 
-/* ================= RESPONSIVE MEDIA QUERIES ================= */
-@media (max-width: 1200px) {
-    html {
-        font-size: 58%;
-    }
-
-    .about .row,
-    .contact .row {
-        grid-template-columns: 1fr;
-    }
-}
 /* ================= SATURAM-CLI SPOTLIGHT SECTION ================= */
 .saturam-section {
     position: relative;
@@ -1488,16 +1477,19 @@ section {
     gap: 0.9rem;
 }
 
-@media (max-width: 991px) {
-    .saturam-hero-card {
-        padding: 3rem 2.2rem;
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+@media (max-width: 1200px) {
+    html {
+        font-size: 58%;
     }
-    .saturam-hero-title {
-        font-size: 3rem;
+
+    .about .row,
+    .contact .row {
+        grid-template-columns: 1fr;
     }
 }
 
-
+@media (max-width: 991px) {
     #menu {
         display: block;
     }
@@ -1523,6 +1515,40 @@ section {
     .home h1 {
         font-size: 4.2rem;
     }
+
+    .saturam-hero-card {
+        padding: 3rem 2.2rem;
+    }
+
+    .saturam-hero-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .about .counter {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline-header {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.4rem;
+    }
+
+    .company-logo-badge {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
+
+    .saturam-features-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1530,8 +1556,17 @@ section {
         font-size: 52%;
     }
 
-    .about .counter {
-        grid-template-columns: 1fr;
+    section {
+        padding: 7rem 4% 4rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .home h1 {
+        font-size: 3.4rem;
     }
 
     .home .cta-group {
@@ -1539,6 +1574,60 @@ section {
     }
 
     .home .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about .counter {
+        grid-template-columns: 1fr;
+    }
+
+    .saturam-hero-card {
+        padding: 2.2rem 1.6rem;
+    }
+
+    .saturam-hero-title {
+        font-size: 2.3rem;
+    }
+
+    .saturam-hero-actions {
+        flex-direction: column;
+    }
+
+    .saturam-hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .saturam-terminal-body {
+        font-size: 1.2rem;
+        padding: 1.4rem 1.2rem;
+    }
+
+    .timeline-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .timeline-header {
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+
+    .company-logo-badge {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+    }
+
+    .contact form {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact form .input-box-group {
+        grid-template-columns: 1fr;
+    }
+
+    .contact form .btn-submit {
         width: 100%;
         justify-content: center;
     }
