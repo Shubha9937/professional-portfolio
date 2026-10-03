@@ -4,7 +4,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-06b6d4?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/spsubhasis)
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-8b5cf6?style=for-the-badge&logo=gmail)](mailto:spsubhasis1998@gmail.com)
 
-> **Data Engineer with 5+ years of experience** in building, scaling, and maintaining robust data pipelines. Proven ability to design, develop, and deploy scalable, reliable data solutions using **Python, Airflow, Spark, Databricks, Kafka, GCP, AWS, Terraform, Docker, Kubernetes, Ansible, Fivetran, dbt, SQL, and AI Models**.
+> **Data Engineer with 5+ years of experience** in building, scaling, and maintaining robust data pipelines. Proven ability to design, develop, and deploy scalable, reliable data solutions using **Python, Airflow, Spark, Databricks, Kafka, Azure, AWS, Terraform, Docker, Kubernetes, Ansible, Fivetran, dbt, SQL, and AI Models**.
 
 🌐 **Live Portfolio**: [https://shubha9937.github.io/professional-portfolio/](https://shubha9937.github.io/professional-portfolio/)
 
@@ -16,7 +16,7 @@
 - **Data Platforms & Compute:** Apache Spark, Databricks, AI Models / GenAI
 - **Orchestration & Transformation:** Apache Airflow, dbt (data build tool), Fivetran
 - **Streaming & Messaging:** Apache Kafka, Event Streams
-- **Cloud Infrastructure & IaC:** Google Cloud Platform (GCP), Amazon Web Services (AWS), HashiCorp Terraform
+- **Cloud Infrastructure & IaC:** Microsoft Azure, Amazon Web Services (AWS), HashiCorp Terraform
 - **Containerization & CI/CD:** Docker, Kubernetes, Ansible, Git, GitHub Actions
 - **Data Warehousing & Databases:** BigQuery, PostgreSQL, MySQL
 

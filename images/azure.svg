@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="azureGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078D4"/>
+      <stop offset="100%" stop-color="#004578"/>
+    </linearGradient>
+    <linearGradient id="azureGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5EA0EF"/>
+      <stop offset="100%" stop-color="#0078D4"/>
+    </linearGradient>
+    <linearGradient id="azureGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#005BA1"/>
+      <stop offset="100%" stop-color="#003566"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <!-- Back Wing / Main Spine -->
+    <path d="M43.7 15.6c1.3-2.3 3.8-3.7 6.4-3.7h20c2.6 0 5.1 1.4 6.4 3.7l42.6 77.2c1.9 3.4-.6 7.6-4.5 7.6H76.2c-2 0-3.9-1-5.1-2.6L43.7 15.6z" fill="url(#azureGrad1)"/>
+    <!-- Left Wing (Cyan / Bright Blue) -->
+    <path d="M12.6 96.5L43.7 15.6c1.3-2.3 3.8-3.7 6.4-3.7h18.2L34.1 98.4c-1 1.8-2.9 3-4.9 3H17.2c-3.9 0-6.5-4.2-4.6-7.9z" fill="url(#azureGrad2)"/>
+    <!-- Right Fold / Shadow -->
+    <path d="M48.8 69.3l22.3 28.5c1.2 1.6 3.1 2.6 5.1 2.6h38.4c3.9 0 6.4-4.2 4.5-7.6L90.8 40.5 48.8 69.3z" fill="url(#azureGrad3)"/>
+  </g>
+</svg>
