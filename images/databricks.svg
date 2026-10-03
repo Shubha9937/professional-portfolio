@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5A36" />
+      <stop offset="100%" stop-color="#E2231A" />
+    </linearGradient>
+  </defs>
+  <g fill="url(#dbGrad)">
+    <!-- Top plate & diamond layer -->
+    <path d="M64 12L16 39.7v13.9l48 27.7 48-27.7V39.7L64 12zm0 15.6l34.4 19.9L64 67.4 29.6 47.5 64 27.6z"/>
+    <!-- 2nd layer -->
+    <path d="M16 58.5v13.9l48 27.7 48-27.7V58.5L64 86.2 16 58.5z"/>
+    <!-- 3rd layer -->
+    <path d="M16 77.2v13.9l48 27.7 48-27.7V77.2L64 104.9 16 77.2z"/>
+    <!-- 4th bottom accent -->
+    <path d="M16 96v8l48 27.7 48-27.7v-8L64 123.7 16 96z" opacity="0.85"/>
+  </g>
+</svg>

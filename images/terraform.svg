@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tfGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#844FBA"/>
+      <stop offset="100%" stop-color="#623CE4"/>
+    </linearGradient>
+    <linearGradient id="tfGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A564EB"/>
+      <stop offset="100%" stop-color="#844FBA"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <!-- Left Column -->
+    <polygon points="12,28.5 45,47.5 45,85.5 12,66.5" fill="url(#tfGrad1)"/>
+    <!-- Middle Column -->
+    <polygon points="48,49.2 81,68.2 81,106.2 48,87.2" fill="url(#tfGrad2)"/>
+    <!-- Right Top Column -->
+    <polygon points="84,28.5 117,9.5 117,47.5 84,66.5" fill="url(#tfGrad1)"/>
+    <!-- Right Bottom Column -->
+    <polygon points="84,70.2 117,51.2 117,89.2 84,108.2" fill="url(#tfGrad2)"/>
+  </g>
+</svg>
