@@ -446,23 +446,26 @@
                 </div>
             </div>
 
-            <form id="contactForm">
+            <form id="contactForm" action="https://formsubmit.co/spsubhasis1998@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
                 <div class="form-group">
                     <label for="nameInput">Your Name</label>
-                    <input type="text" id="nameInput" class="input-box" placeholder="e.g. John Doe" required>
+                    <input type="text" id="nameInput" name="name" class="input-box" placeholder="e.g. John Doe" required>
                 </div>
                 <div class="form-group">
                     <label for="emailInput">Your Email</label>
-                    <input type="email" id="emailInput" class="input-box" placeholder="e.g. john@example.com" required>
+                    <input type="email" id="emailInput" name="email" class="input-box" placeholder="e.g. john@example.com" required>
                 </div>
                 <div class="form-group">
                     <label for="subjectInput">Subject</label>
-                    <input type="text" id="subjectInput" class="input-box" placeholder="Project collaboration / Inquiry" required>
+                    <input type="text" id="subjectInput" name="_subject" class="input-box" placeholder="Project collaboration / Inquiry" required>
                 </div>
                 <div class="form-group">
                     <label for="messageInput">Your Message</label>
-                    <textarea id="messageInput" class="input-box" placeholder="Write your message here..." required></textarea>
+                    <textarea id="messageInput" name="message" class="input-box" placeholder="Write your message here..." required></textarea>
                 </div>
+                <div id="formStatus" class="form-status"></div>
                 <button type="submit" class="btn btn-submit">
                     Send Message <i class="fas fa-paper-plane"></i>
                 </button>

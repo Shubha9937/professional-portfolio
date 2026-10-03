@@ -102,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Contact form submit handling (Direct email delivery via FormSubmit with mailto fallback)
     if (contactForm) {
+        const formStatus = document.getElementById('formStatus');
+
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const name = document.getElementById('nameInput')?.value.trim() || '';
@@ -114,7 +116,18 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
+            if (formStatus) {
+                formStatus.className = 'form-status';
+                formStatus.style.display = 'none';
+                formStatus.innerText = '';
+            }
+
             try {
+                // If browsed via file:// protocol directly from disk, alert user or fallback to mailto
+                if (window.location.protocol === 'file:') {
+                    throw new Error('Local file protocol detected. To test background API, test on live GitHub Pages or local HTTP server.');
+                }
+
                 const response = await fetch('https://formsubmit.co/ajax/spsubhasis1998@gmail.com', {
                     method: 'POST',
                     headers: {
@@ -124,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify({
                         name: name,
                         email: email,
-                        _subject: `Portfolio Message: ${subject}`,
+                        _subject: `Portfolio Inquiry: ${subject}`,
                         message: message,
                         _captcha: 'false',
                         _template: 'table'
@@ -133,31 +146,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const data = await response.json();
 
-                if (response.ok || data.success === 'true' || data.success === true) {
+                if (response.ok && (data.success === 'true' || data.success === true)) {
                     submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Message Sent!';
                     submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                    
+                    if (formStatus) {
+                        formStatus.className = 'form-status success';
+                        formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent directly to Subhasis\'s inbox.';
+                    }
                     contactForm.reset();
-                } else if (data.message && data.message.includes('Activation')) {
-                    submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Sent (Activation Pending)';
+                } else if (data.message && data.message.toLowerCase().includes('activation')) {
+                    submitBtn.innerHTML = '<i class="fas fa-info-circle"></i> Sent (Activation)';
                     submitBtn.style.background = 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)';
+                    if (formStatus) {
+                        formStatus.className = 'form-status info';
+                        formStatus.innerHTML = '<i class="fas fa-info-circle"></i> Form submitted! Please click the one-time activation link in your Gmail.';
+                    }
                     contactForm.reset();
                 } else {
                     throw new Error(data.message || 'Submission failed');
                 }
             } catch (err) {
-                console.warn('Form submission fallback to mailto:', err);
-                // Fallback to mail client
+                console.warn('Form submission notice:', err.message);
+                
+                if (formStatus) {
+                    formStatus.className = 'form-status error';
+                    formStatus.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${err.message || 'Unable to deliver automatically. Launching your email client...'}`;
+                }
+
+                // Fallback to mail client if not on web server
                 const mailtoUrl = `mailto:spsubhasis1998@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hi Subhasis,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
                 window.location.href = mailtoUrl;
 
                 submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Opening Mail Client...';
-                submitBtn.style.background = 'var(--accent-gradient)';
             } finally {
                 setTimeout(() => {
                     submitBtn.innerHTML = originalText;
                     submitBtn.style.background = '';
                     submitBtn.disabled = false;
-                }, 4000);
+                }, 5000);
             }
         });
     }
