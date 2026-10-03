@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(counterSection);
     }
 
-    // Contact form submit handling (Direct email delivery via FormSubmit with mailto fallback)
+    // Contact form submit handling (Direct email delivery via FormSubmit - NEVER launches Outlook)
     if (contactForm) {
         const formStatus = document.getElementById('formStatus');
 
@@ -123,11 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                // If browsed via file:// protocol directly from disk, alert user or fallback to mailto
-                if (window.location.protocol === 'file:') {
-                    throw new Error('Local file protocol detected. To test background API, test on live GitHub Pages or local HTTP server.');
-                }
-
                 const response = await fetch('https://formsubmit.co/ajax/spsubhasis1998@gmail.com', {
                     method: 'POST',
                     headers: {
@@ -167,18 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error(data.message || 'Submission failed');
                 }
             } catch (err) {
-                console.warn('Form submission notice:', err.message);
+                console.error('Form submission error:', err);
                 
                 if (formStatus) {
                     formStatus.className = 'form-status error';
-                    formStatus.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${err.message || 'Unable to deliver automatically. Launching your email client...'}`;
+                    formStatus.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${err.message || 'Failed to deliver message. Please try again or email directly at spsubhasis1998@gmail.com'}`;
                 }
 
-                // Fallback to mail client if not on web server
-                const mailtoUrl = `mailto:spsubhasis1998@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hi Subhasis,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-                window.location.href = mailtoUrl;
-
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Opening Mail Client...';
+                submitBtn.innerHTML = '<i class="fas fa-times-circle"></i> Failed to Send';
+                submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
             } finally {
                 setTimeout(() => {
                     submitBtn.innerHTML = originalText;
