@@ -697,6 +697,56 @@ section {
     line-height: 1.6;
 }
 
+.timeline-card .experience-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin: 1.6rem 0 2rem;
+}
+
+.timeline-card .experience-list li {
+    font-size: 1.35rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-card .experience-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-light);
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.timeline-card .experience-list li strong {
+    color: #f1f5f9;
+    font-weight: 600;
+}
+
+.timeline-card .tech-stack {
+    margin-top: 1.8rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.timeline-card .tech-stack .tech-stack-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 0.9rem;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
 /* ================= PORTFOLIO & SKILLS ================= */
 .section-subtitle {
     font-size: 2rem;
