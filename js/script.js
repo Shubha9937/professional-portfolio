@@ -100,35 +100,65 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(counterSection);
     }
 
-    // Contact form submit handling
+    // Contact form submit handling (Direct email delivery via FormSubmit with mailto fallback)
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const name = document.getElementById('nameInput')?.value || '';
-            const email = document.getElementById('emailInput')?.value || '';
-            const subject = document.getElementById('subjectInput')?.value || 'Portfolio Contact';
-            const message = document.getElementById('messageInput')?.value || '';
+            const name = document.getElementById('nameInput')?.value.trim() || '';
+            const email = document.getElementById('emailInput')?.value.trim() || '';
+            const subject = document.getElementById('subjectInput')?.value.trim() || 'Portfolio Contact';
+            const message = document.getElementById('messageInput')?.value.trim() || '';
 
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                // Open mailto client fallback
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/spsubhasis1998@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        _subject: `Portfolio Message: ${subject}`,
+                        message: message,
+                        _captcha: 'false',
+                        _template: 'table'
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok || data.success === 'true' || data.success === true) {
+                    submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Message Sent!';
+                    submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                    contactForm.reset();
+                } else if (data.message && data.message.includes('Activation')) {
+                    submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Sent (Activation Pending)';
+                    submitBtn.style.background = 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)';
+                    contactForm.reset();
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (err) {
+                console.warn('Form submission fallback to mailto:', err);
+                // Fallback to mail client
                 const mailtoUrl = `mailto:spsubhasis1998@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hi Subhasis,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
                 window.location.href = mailtoUrl;
 
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Ready!';
-                submitBtn.style.background = '#2ecc71';
-
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Opening Mail Client...';
+                submitBtn.style.background = 'var(--accent-gradient)';
+            } finally {
                 setTimeout(() => {
                     submitBtn.innerHTML = originalText;
                     submitBtn.style.background = '';
                     submitBtn.disabled = false;
-                    contactForm.reset();
-                }, 3000);
-            }, 800);
+                }, 4000);
+            }
         });
     }
 
